@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<%- include('header.ejs'); -%>
+<html>
+    <head>
+       <style>
+        .out{
+            float: left;
+            height: auto;
+            width: 100%;
+        }
+         .box{
+            height: 370px;
+            width: 450px;
+            float: left;
+            background-color: rgba(232, 135, 209, 0.1);
+            margin-left: 600px;
+            margin-top: 50px;
+         }
+         input{
+            padding: 5px 9px 5px 9px ;
+         }
+         button {
+         background-color: rgb(243, 47, 181);; 
+         color: white; 
+         border: none; 
+         padding: 10px 20px; 
+         font-size: 16px; 
+         border-radius: 5px; 
+         cursor: pointer; 
+         transition: background-color 0.3s ease;
+       }
+
+button:hover {
+  background-color: #e4e9ef; 
+  color:rgb(9, 93, 99);
+}
+    
+       </style>
+    </head>
+    <body>
+        <h1>Create New Task</h1>
+        <div class="out">
+        <div class="box">
+            <form method="post" action="/taskdetails">
+                <h4>Task Name:</h4>
+                <input type="text" name="task"/>
+                <h4>Task Description:</h4>
+                <input type="text" name="description"/>
+                <h4>Task Priority:</h4>
+                <input type="text" name="priority"/>
+                <h4>Is Completed Task:</h4>
+                <input type="text" name="completed"/><br><br><br>
+                <button>Add Task</button>
+            </form>
+        </div>
+    </div>
+    </body>
+  
+    
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <%- include('header.ejs'); -%>
+<head>
+    <title>Edit Contact</title>
+    <style>
+        .out{
+            float: left;
+            height: auto;
+            width: 100%;
+        }
+         .box{
+            height: 370px;
+            width: 450px;
+            float: left;
+            background-color: rgba(3, 3, 3, 0.1);
+            margin-left: 400px;
+            margin-top: 50px;
+         }
+         input{
+            padding: 5px 9px 5px 9px ;
+         }
+         button {
+         background-color: #0a0a0a; 
+         color: white; 
+         border: none; 
+         padding: 10px 20px; 
+         font-size: 16px; 
+         border-radius: 5px; 
+         cursor: pointer; 
+         transition: background-color 0.3s ease;
+       }
+
+        button:hover {
+          background-color: #e4e9ef; 
+          color:blue
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Edit Contact</h1>
+    <div class="out">
+    <div class="box">
+    <form method="post" action="/update/<%= task._id %>">
+        <h4>Task:</h4>
+        <input type="text" name="task" value="<%= task.task %>" required/>
+
+        <h4>Description:</h4>
+        <input type="text" name="description" value="<%= task.description %>" required/>
+
+        <h4>Priority:</h4>
+        <input type="text" name="priority" value="<%= task.priority %>" required/>
+
+        <h4>is Completed the task:</h4>
+        <input type="text" name="completed" value="<%= task.completed %>" required/>
+
+        <br><br>
+        <button type="submit">Update TAsk</button>
+    </form>
+    </div>
+    </div>
+</body>
+
+</html>

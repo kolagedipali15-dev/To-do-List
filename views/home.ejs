@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<%- include('header.ejs'); -%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <style>
+        body {
+        
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            height: 350px;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgb(9, 93, 99);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover{
+            background-color: #e4e9ef; 
+            color:rgb(9, 93, 99);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Task Project</h1>
+        <a href="/task" class="btn">Go to Task</a>
+    </div>
+</body>
+
+</html>
